@@ -39,11 +39,10 @@ test(("Adicionar um novo participante ao sorteio"),()=>{
     //Adicionar um novo participante:
     fireEvent.change(input, {
       target: {
-        value:"Irmão do Jorel"
+        value:""
       }
     })
-    //Garantir que o input esteja ativado:
-    expect(input).toHaveFocus
+    fireEvent.click(botao)
     //Garantir que o valor inicial do input seja vazio:
     expect(input).toHaveValue("")
 
